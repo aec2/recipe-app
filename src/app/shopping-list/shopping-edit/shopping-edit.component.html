@@ -1,0 +1,21 @@
+<div class="container">
+  <form action="">
+    <div class="row g-3">
+      <div class="col-sm-5">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" id="name" class="form-control" #nameInput/>
+      </div>
+      <div class="col-sm-5">
+        <label for="amount" class="form-label">Amount</label>
+        <input type="text" id="amount" class="form-control" #amountInput/>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-sm-5">
+        <button class="btn btn-success me-3" type="submit" (click)="onAddItem()">Add</button>
+        <button class="btn btn-danger me-3" type="button" (click)="onDeleteItem()">Delete</button>
+        <button class="btn btn-primary" type="button" (click)="onClear()">Clear</button>
+      </div>
+    </div>
+  </form>
+</div>
