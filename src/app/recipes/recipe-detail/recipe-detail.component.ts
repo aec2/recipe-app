@@ -8,4 +8,10 @@ import { Recipe } from '../recipe.model';
 })
 export class RecipeDetailComponent {
   @Input() recipe: Recipe;
+  isShow: boolean = false;
+
+
+  btnClicked(openDropDown: boolean) {
+    this.isShow = openDropDown;
+  }
 }
