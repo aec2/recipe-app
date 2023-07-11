@@ -1,16 +1,11 @@
-<a href="#" class="list-group-item clearfix" (click)="onSelected()">
-  <div class="float-start">
-    <h4 class="list-group-item-heading">Recipe Name: {{ recipe.name }}</h4>
-    <p class="list-group-item-text">
-      Recipe Description: {{ recipe.description }}
-    </p>
+<a [routerLink]="[index]" class="list-group-item clearfix shadow-sm p-3 mb-3 bg-body rounded" routerLinkActive="active">
+  <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <h4 class="mb-1">Recipe Name: {{ recipe.name }}</h4>
+      <p class="mb-0">Recipe Description: {{ recipe.description }}</p>
+    </div>
+    <div class="ms-3">
+      <img [src]="recipe.imagePath" alt="{{ recipe.name }}" class="img-fluid rounded-circle" style="max-height: 50px">
+    </div>
   </div>
-  <span class="float-end">
-    <img
-      [src]="recipe.imagePath"
-      alt="{{ recipe.name }}"
-      class="img-fluid"
-      style="max-height: 50px"
-    />
-  </span>
 </a>

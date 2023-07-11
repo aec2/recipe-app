@@ -1,0 +1,15 @@
+.active {
+  color: #ffffff;               /* Font color */
+  background: linear-gradient(to right, #0062E6, #33AEFF); /* Gradient Background */
+  border: solid 1px #007bff;    /* Border color */
+  border-radius: 25px;          /* More rounded border */
+  padding: 10px 20px;           /* Padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Shadow for depth */
+  transition: all 0.3s ease;    /* Smooth transition effect */
+}
+
+.active:hover {
+  background: linear-gradient(to right, #0056b3, #1d8cf8); /* Darker gradient on hover */
+  border-color: #0056b3;
+  transform: scale(1.02); /* Slightly increase size on hover */
+}
