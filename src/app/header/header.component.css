@@ -1,0 +1,28 @@
+.navbar-custom {
+  background: linear-gradient(to right, #021B79, #0575E6); /* Dark Blue to Light Blue gradient */
+  border: none;
+  transition: all 0.5s ease-in-out;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-custom a {
+  color: #ffffff;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .navbar-brand:hover {
+  color: #f8f8f8;
+  transition: color 0.5s ease-in-out;
+}
+
+.navbar-custom .dropdown-item {
+  color: #ffffff;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f8f8f8;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}

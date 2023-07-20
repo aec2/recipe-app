@@ -1,0 +1,64 @@
+.bg-gradient {
+  background: linear-gradient(45deg, rgba(29, 185, 84, 1) 0%, rgba(29, 163, 184, 1) 100%);
+  color: rgb(58, 14, 14);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.form-control {
+  transition: border 0.5s ease-in-out, box-shadow 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #20c997;
+  box-shadow: 0 0 0 0.2rem rgba(32, 201, 151, 0.25);
+  transform: scale(1.02);
+}
+
+.btn-primary {
+  background-color: #20c997;
+  border-color: #20c997;
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
