@@ -2,6 +2,7 @@ import { Ingredient } from '../shared/ingredient.model';
 import { Subject } from 'rxjs';
 
 export class ShoppingService {
+
   ingredientsChanged = new Subject<Ingredient[]>();
   startedEditing = new Subject<number>();
 
@@ -26,7 +27,7 @@ export class ShoppingService {
     this.ingredientsChanged.next(this.ingredients.slice());
   }
 
-  addIngrediens(ingredients: Ingredient[]) {
+  addIngredients(ingredients: Ingredient[]) {
     // for (const ingredient of ingredients) {
     //   this.addIngredient(ingredient);
     // }

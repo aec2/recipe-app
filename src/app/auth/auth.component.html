@@ -1,0 +1,75 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg p-3 mb-5 bg-white rounded">
+        <div class="card-header bg-primary text-white text-center">
+          <h4>Log In</h4>
+        </div>
+        <div class="card-body">
+          <div class="alert alert-danger text-center" *ngIf="error">
+            <p>{{ this.error }}</p>
+          </div>
+          <div class="text-center">
+            <app-login-spinner *ngIf="this.isLoading"></app-login-spinner>
+          </div>
+          <form
+            #authForm="ngForm"
+            (ngSubmit)="onSubmit(authForm)"
+            *ngIf="!this.isLoading"
+          >
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"
+                  ><i class="fas fa-user"></i
+                ></span>
+              </div>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="example@email.com"
+                aria-label="Email"
+                ngModel
+                required
+                email
+                name="email"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input
+                type="password"
+                id="password"
+                class="form-control"
+                placeholder="********"
+                aria-label="Password"
+                ngModel
+                name="password"
+                required
+                minlength="6"
+              />
+            </div>
+            <div class="d-grid gap-2">
+              <button
+                class="btn btn-primary btn-lg shadow-sm"
+                type="submit"
+                [disabled]="!authForm.valid"
+              >
+                {{ isLoginMode ? "Login" : "Sign Up" }}
+              </button>
+              <button
+                class="btn btn-light btn-lg border shadow-sm"
+                type="button"
+                (click)="onSwitchMode()"
+              >
+                Switch to {{ isLoginMode ? "Sign Up" : "Login" }}
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,6 @@ export class DataStorageService {
         'https://recipe-app-4cab4-default-rtdb.firebaseio.com/recipes.json'
       )
       .pipe(
-        tap(recipes => console.log(recipes)), // add this line
         map((recipes) => {
           return recipes.map((recipe) => {
             return {
@@ -35,7 +34,7 @@ export class DataStorageService {
           });
         }),
         tap((recipes) => {
-         return this.recipeService.setRecipes(recipes);
+          this.recipeService.setRecipes(recipes);
         }),
       );
 
