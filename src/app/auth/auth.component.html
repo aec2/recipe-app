@@ -1,3 +1,4 @@
+<ng-template appPlaceHolder ></ng-template>
 <div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-6">
@@ -9,7 +10,7 @@
           <!-- <div class="alert alert-danger text-center" *ngIf="error">
             <p>{{ this.error }}</p>
           </div> -->
-          <app-alert [message]="this.error" *ngIf="error" (close)="onHandleError()"></app-alert>
+          <!-- <app-alert [message]="this.error" *ngIf="error" (close)="onHandleError()"></app-alert> -->
           <div class="text-center">
             <app-login-spinner *ngIf="this.isLoading"></app-login-spinner>
           </div>
