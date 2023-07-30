@@ -2,6 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingService } from './shopping.service';
 import { Subscription } from 'rxjs';
+import { LoggingService } from '../loggin.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -12,7 +13,7 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
   ingredients: Ingredient[];
   private igChanged: Subscription;
 
-  constructor(private shoppingService: ShoppingService) {}
+  constructor(private shoppingService: ShoppingService, private loggingService: LoggingService) {}
 
   ngOnInit(): void {
     this.ingredients = this.shoppingService.getIngredients();
@@ -21,6 +22,8 @@ export class ShoppingListComponent implements OnInit, OnDestroy {
         this.ingredients = ingredients;
       }
     );
+    this.loggingService.printLog('ShoppingListComponent Logged ngOnInit');
+
     }
 
   ngOnDestroy(): void {

@@ -1,28 +1,42 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f5f5;
+}
+
 .navbar-custom {
-  background: linear-gradient(to right, #021B79, #0575E6); /* Dark Blue to Light Blue gradient */
-  border: none;
-  transition: all 0.5s ease-in-out;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: #343a40 !important;
+  color: white !important;
 }
 
 .navbar-custom a {
-  color: #ffffff;
+  color: white !important;
 }
 
-.navbar-custom .nav-link:hover,
-.navbar-custom .navbar-brand:hover {
-  color: #f8f8f8;
-  transition: color 0.5s ease-in-out;
+.nav-link.active {
+  color: #f8f9fa !important;
+  background-color: #6c757d !important;
 }
 
-.navbar-custom .dropdown-item {
-  color: #ffffff;
+.container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  min-height: calc(100vh - 64px);
 }
 
-.navbar-custom .dropdown-item:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #f8f8f8;
-  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+.box-shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
+
+.logout-item .logout-link {
+  transition: all 0.3s ease;
+}
+
+.logout-item:hover .logout-link {
+  color: #722e35; /* change this color to your preferred hover color */
+  transform: scale(1.1);
+}
+
